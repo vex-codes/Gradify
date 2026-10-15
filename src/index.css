@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+
+  /* Classic (Default - Green) */
+  /* Classic (Default - Green/Traffic Light) */
+  :root[data-theme="classic"] {
+    --primary: 142 71% 45%;
+    /* Emerald 500 */
+    --primary-foreground: 144 100% 97%;
+    --ring: 142 71% 45%;
+
+    /* Standard Grading Scale - High Contrast */
+    --grade-a: 142 76% 36%;
+    --grade-a-fg: 142 76% 95%;
+    /* Green */
+    --grade-b: 48 96% 53%;
+    --grade-b-fg: 48 96% 10%;
+    /* Yellow */
+    --grade-c: 32 95% 60%;
+    --grade-c-fg: 32 95% 10%;
+    /* Orange */
+    --grade-d: 0 84% 60%;
+    --grade-d-fg: 0 84% 95%;
+    /* Red */
+    --grade-f: 0 0% 20%;
+    --grade-f-fg: 0 0% 95%;
+    /* Grey/Dark */
+  }
+
+  .dark[data-theme="classic"] {
+    --primary: 142 70% 50%;
+    --primary-foreground: 144 100% 5%;
+    --ring: 142 70% 50%;
+
+    --grade-a: 142 70% 25%;
+    --grade-a-fg: 142 70% 90%;
+    --grade-b: 48 90% 25%;
+    --grade-b-fg: 48 90% 90%;
+    --grade-c: 32 90% 25%;
+    --grade-c-fg: 32 90% 90%;
+    --grade-d: 0 80% 25%;
+    --grade-d-fg: 0 80% 90%;
+    --grade-f: 0 0% 20%;
+    --grade-f-fg: 0 0% 90%;
+  }
+
+  /* Ocean (Cyan -> Navy) */
+  :root[data-theme="ocean"] {
+    --primary: 221 83% 53%;
+    /* Blue 500 */
+    --primary-foreground: 210 40% 98%;
+    --ring: 221 83% 53%;
+
+    --grade-a: 180 100% 40%;
+    --grade-a-fg: 180 100% 95%;
+    /* Teal/Cyan */
+    --grade-b: 195 90% 60%;
+    --grade-b-fg: 195 90% 10%;
+    /* Sky Blue */
+    --grade-c: 210 90% 65%;
+    --grade-c-fg: 210 90% 10%;
+    /* Dodger Blue */
+    --grade-d: 225 80% 60%;
+    --grade-d-fg: 225 80% 95%;
+    /* Royal Blue */
+    --grade-f: 240 60% 40%;
+    --grade-f-fg: 240 60% 95%;
+    /* Indigo */
+  }
+
+  .dark[data-theme="ocean"] {
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+    --ring: 217 91% 60%;
+
+    --grade-a: 180 90% 25%;
+    --grade-a-fg: 180 90% 90%;
+    --grade-b: 200 90% 30%;
+    --grade-b-fg: 200 90% 90%;
+    --grade-c: 215 90% 30%;
+    --grade-c-fg: 215 90% 90%;
+    --grade-d: 230 80% 30%;
+    --grade-d-fg: 230 80% 90%;
+    --grade-f: 245 70% 30%;
+    --grade-f-fg: 245 70% 90%;
+  }
+
+  /* Sunset (Yellow -> Red) */
+  :root[data-theme="sunset"] {
+    --primary: 24 95% 53%;
+    /* Orange 500 */
+    --primary-foreground: 60 9% 98%;
+    --ring: 24 95% 53%;
+
+    --grade-a: 50 100% 50%;
+    --grade-a-fg: 50 100% 10%;
+    /* Golden Yellow */
+    --grade-b: 35 100% 60%;
+    --grade-b-fg: 35 100% 10%;
+    /* Amber */
+    --grade-c: 20 90% 60%;
+    --grade-c-fg: 20 90% 95%;
+    /* Orange */
+    --grade-d: 10 80% 55%;
+    --grade-d-fg: 10 80% 95%;
+    /* Red-Orange */
+    --grade-f: 0 70% 45%;
+    --grade-f-fg: 0 70% 95%;
+    /* Rust */
+  }
+
+  .dark[data-theme="sunset"] {
+    --primary: 24 100% 60%;
+    --primary-foreground: 60 9% 2%;
+    --ring: 24 100% 60%;
+
+    --grade-a: 50 90% 30%;
+    --grade-a-fg: 50 90% 90%;
+    --grade-b: 35 90% 30%;
+    --grade-b-fg: 35 90% 90%;
+    --grade-c: 20 90% 30%;
+    --grade-c-fg: 20 90% 90%;
+    --grade-d: 10 80% 30%;
+    --grade-d-fg: 10 80% 90%;
+    --grade-f: 0 70% 30%;
+    --grade-f-fg: 0 70% 90%;
+  }
+
+  /* Lemon (Lime -> Gold) */
+  :root[data-theme="lemon"] {
+    --primary: 48 96% 53%;
+    --primary-foreground: 26 83% 14%;
+    --ring: 48 96% 53%;
+
+    --grade-a: 80 90% 50%;
+    --grade-a-fg: 80 90% 10%;
+    /* Lime */
+    --grade-b: 60 90% 50%;
+    --grade-b-fg: 60 90% 10%;
+    /* Yellow */
+    --grade-c: 45 90% 55%;
+    --grade-c-fg: 45 90% 10%;
+    /* Gold */
+    --grade-d: 35 90% 60%;
+    --grade-d-fg: 35 90% 10%;
+    /* Amber */
+    --grade-f: 25 90% 50%;
+    --grade-f-fg: 25 90% 10%;
+    /* Orange */
+  }
+
+  .dark[data-theme="lemon"] {
+    --primary: 48 96% 53%;
+    --primary-foreground: 26 83% 14%;
+    --ring: 48 96% 53%;
+
+    --grade-a: 80 80% 30%;
+    --grade-a-fg: 80 80% 90%;
+    --grade-b: 60 80% 30%;
+    --grade-b-fg: 60 80% 90%;
+    --grade-c: 45 80% 30%;
+    --grade-c-fg: 45 80% 90%;
+    --grade-d: 35 80% 30%;
+    --grade-d-fg: 35 80% 90%;
+    --grade-f: 25 80% 30%;
+    --grade-f-fg: 25 80% 90%;
+  }
+
+  /* Magenta (Pop Star - High Contrast) */
+  :root[data-theme="magenta"] {
+    --primary: 316 73% 52%;
+    --primary-foreground: 210 40% 98%;
+    --ring: 316 73% 52%;
+
+    /* A: Ultra Bright Pink (almost white) */
+    --grade-a: 300 100% 92%;
+    --grade-a-fg: 300 100% 15%;
+    /* B: Vibrant Hot Pink */
+    --grade-b: 320 90% 70%;
+    --grade-b-fg: 320 90% 15%;
+    /* C: Deep Rose */
+    --grade-c: 340 85% 60%;
+    --grade-c-fg: 340 85% 95%;
+    /* D: Purple */
+    --grade-d: 280 80% 55%;
+    --grade-d-fg: 280 80% 95%;
+    /* F: Dark Indigo */
+    --grade-f: 260 70% 35%;
+    --grade-f-fg: 260 70% 95%;
+  }
+
+  .dark[data-theme="magenta"] {
+    --primary: 316 70% 60%;
+    --primary-foreground: 210 40% 98%;
+    --ring: 316 70% 60%;
+
+    /* A: Neon Magnesium */
+    --grade-a: 300 100% 50%;
+    --grade-a-fg: 300 100% 95%;
+    /* B: Hot Pink */
+    --grade-b: 320 90% 40%;
+    --grade-b-fg: 320 90% 95%;
+    /* C: Rose */
+    --grade-c: 340 80% 35%;
+    --grade-c-fg: 340 80% 95%;
+    /* D: Purple */
+    --grade-d: 280 70% 30%;
+    --grade-d-fg: 280 70% 95%;
+    /* F: Midnight */
+    --grade-f: 260 60% 20%;
+    --grade-f-fg: 260 60% 90%;
+  }
+
+  /* Base shadcn vars (keep default layout colors, only overriding primary for themes) */
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+    --secondary: 222 47% 11%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    --ring: 216 34% 17%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

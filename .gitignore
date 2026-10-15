@@ -1,0 +1,38 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Diagnostic & scraper debug HTML dumps (contain sensitive student/district data)
+*_debug.html
+*.debug.html
+
+# Dependencies
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables & credentials
+.env
+.env.*
+!.env.example
