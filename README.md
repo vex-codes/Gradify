@@ -27,7 +27,7 @@
 
 ### 📊 Real-Time Academic Dashboard
 - **Grade Triage**: Instant visual cards displaying current course averages, letter grades, and last-updated timestamps.
-- **Estimated GPA Pill**: Real-time estimated cumulative GPA calculation directly on your overview screen.
+- **Estimated GPA Pill**: Real-time estimated cumulative GPA calculation directly on  overview screen.
 
 ### 🧮 What-If Grade & GPA Simulators
 - **Hypothetical Assignment Modeling**: Add custom or hypothetical assignments with custom categories and weights to see how future tests or quizzes impact your overall class average.
@@ -94,7 +94,7 @@ Gradify is engineered with a **local-first privacy approach**:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/gradify.git
+git clone https://github.com/vex-codes/gradify.git
 cd gradify
 ```
 
